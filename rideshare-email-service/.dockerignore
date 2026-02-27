@@ -1,0 +1,12 @@
+.env
+node_modules
+.git
+.gitignore
+*.log
+.next
+*.tmp
+*.bak
+*.swp
+Desktop.ini
+Thumbs.db
+.DS_Store

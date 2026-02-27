@@ -1,0 +1,14 @@
+services:
+  email-service:
+    build: .
+    ports:
+      - "3002:3002"               
+    env_file:
+      - .env                      
+    networks:
+      - swiftride-net
+    restart: unless-stopped       
+
+networks:
+  swiftride-net:
+    external: true              

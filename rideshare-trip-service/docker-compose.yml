@@ -1,0 +1,19 @@
+services:
+
+  python-service:
+    build: .
+    container_name: trip-service
+    ports:
+      - "3005:3005"
+      - "3006:3006"
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    command: ["supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]  
+    networks:
+      - swiftride-net
+
+networks:
+  swiftride-net:
+    external: true

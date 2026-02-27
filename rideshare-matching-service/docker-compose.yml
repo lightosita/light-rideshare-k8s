@@ -1,0 +1,13 @@
+services:
+  matching-service:
+    build: .
+    env_file:
+      - .env
+    ports:
+      - "3004:3004"
+    networks:
+      - swiftride-net
+
+networks:
+  swiftride-net:
+    external: true
